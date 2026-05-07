@@ -23,8 +23,8 @@ const content = {
 export default function ProblemSolution({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
   const t = content[lang];
   return (
-    <section className="py-24 bg-zinc-950">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+    <section className="py-14 sm:py-24 bg-zinc-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
         {/* Problem */}
         <motion.div
           key={`${lang}-problem`}

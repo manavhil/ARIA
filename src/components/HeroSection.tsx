@@ -89,14 +89,14 @@ export default function HeroSection({ lang }: HeroSectionProps) {
   const slideStartX = lang === 'ar' ? 50 : -50;
 
   return (
-    <section className="relative min-h-[75vh] flex items-center bg-black">
+    <section className="relative flex items-center bg-black">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-500/8 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-10 sm:pb-16 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full">
 
         {/* Left copy */}
         <motion.div
@@ -105,24 +105,24 @@ export default function HeroSection({ lang }: HeroSectionProps) {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className={lang === 'ar' ? 'text-right order-2 lg:order-1' : 'order-2 lg:order-1'}
         >
-          <div className="mt-20 mb-3">
+          <div className="mt-2 sm:mt-20 mb-3">
             <span className={`inline-block px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full text-[10px] uppercase tracking-[0.2em] text-orange-400 shadow-[0_0_16px_4px_rgba(234,88,12,0.3),0_0_40px_8px_rgba(234,88,12,0.12)] ${lang === 'ar' ? 'font-arabic' : 'font-mono'}`}>
               {t.eyebrow}
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] mb-4 sm:mb-6">
             <span className="text-white">{t.headline1}</span><br />
             <span className="bg-gradient-to-r from-orange-300 via-orange-400 to-amber-500 bg-clip-text text-transparent">
               {t.headline2}
             </span>
           </h1>
 
-          <p className={`text-neutral-400 text-base md:text-lg leading-relaxed mb-8 max-w-md ${lang === 'ar' ? 'font-arabic' : ''}`}>
+          <p className={`text-neutral-400 text-sm sm:text-base md:text-lg leading-relaxed mb-5 sm:mb-8 max-w-md ${lang === 'ar' ? 'font-arabic' : ''}`}>
             {t.sub}
           </p>
 
-          <div className={`flex flex-wrap gap-3 mb-6 ${lang === 'ar' ? 'justify-end' : ''}`}>
+          <div className={`flex flex-wrap gap-3 mb-4 sm:mb-6 ${lang === 'ar' ? 'justify-end' : ''}`}>
             <Link
               to="/contact"
               className="relative inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm text-white transition-all hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20 overflow-hidden group"
@@ -151,11 +151,11 @@ export default function HeroSection({ lang }: HeroSectionProps) {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
-          className="relative order-1 lg:order-2 flex flex-col items-center lg:mt-4 w-full"
+          className="relative order-1 lg:order-2 flex flex-col items-center lg:mt-4 w-full -mb-4 lg:mb-0"
         >
           {/* Main 3D Wrapper */}
           <div
-            className="relative w-full h-[400px] lg:h-[500px] cursor-pointer [&_a]:!hidden flex items-center justify-center"
+            className="relative w-full h-[260px] sm:h-[340px] lg:h-[500px] cursor-pointer [&_a]:!hidden flex items-center justify-center"
             onClick={handleRobotClick}
           >
             {/* UPDATED SPLINE URL HERE */}

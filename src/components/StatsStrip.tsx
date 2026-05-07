@@ -54,8 +54,8 @@ export default function StatsStrip({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
   const items: Stat[] = stats[lang];
   return (
     <section className="border-y border-white/5 bg-white/[0.02]">
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 md:divide-x md:divide-white/10">
           {items.map((s, i) => (
             <motion.div
               key={`${lang}-${i}`}
@@ -63,7 +63,7 @@ export default function StatsStrip({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex flex-col items-center text-center px-6 py-2"
+              className="flex flex-col items-center text-center px-2 sm:px-6 py-2"
             >
               <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-300 to-amber-400 bg-clip-text text-transparent">
                 {s.numeric !== null ? (

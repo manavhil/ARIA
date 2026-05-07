@@ -37,8 +37,8 @@ export default function CTABanner({ lang = 'en', headline, subline, ctaLabel, ct
   const n = note ?? d.note;
 
   return (
-    <section className="py-24 bg-zinc-950">
-      <div className="max-w-3xl mx-auto px-6 text-center">
+    <section className="py-14 sm:py-24 bg-zinc-950">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         {/* orange glow */}
         <div className="relative inline-block w-full">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-32 bg-orange-600/15 blur-3xl rounded-full pointer-events-none" />

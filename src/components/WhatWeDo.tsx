@@ -65,8 +65,8 @@ const content = {
 export default function WhatWeDo({ lang = 'en' }: { lang?: 'en' | 'ar' }) {
   const t = content[lang];
   return (
-    <section className="py-24 bg-black">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-14 sm:py-24 bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
